@@ -1,0 +1,50 @@
+1. main()
+
+main(){
+    print('Hello, voyagers');
+}
+
+main(){
+    final String myName = 'Enemuoh, Chukwuebuka Charles Leo'
+    print(myName);
+}
+
+int x = 10;
+in x = 50;
+
+5. value is of type int
+
+6. true
+   false
+   true
+   true
+
+7. int findPerimeter(int l, int w){
+       return 2(l + w);
+   }
+   
+   main(){
+       findPerimeter(3,6);
+   }
+   
+8.	class Car{
+		final String brandName;
+		final String model;
+		final String color;
+		final int year;
+		
+		const Car({
+			required this.brandName,
+			required this.model,
+			required this.color,
+			required this.year,
+	}
+	
+	class Main{
+		final Car myCar = Car(brandName: 'Dodge', model: 'Challenger', color: 'black', year: 2022,);
+		
+		final Car yourCar = Car(brandName: 'Toyota', model: 'Venza', color: 'wine', year: 2024,);
+		
+		final Car lastCar = Car(brandName: 'Ford', model: 'Avalanche', color: 'black', year: 2019,);
+	}
+	
