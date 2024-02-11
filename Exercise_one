@@ -20,7 +20,7 @@ in x = 50;
    true
 
 7. int findPerimeter(int l, int w){
-       return 2(l + w);
+       return 2*(l + w);
    }
    
    main(){
