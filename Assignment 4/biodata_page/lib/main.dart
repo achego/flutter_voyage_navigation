@@ -1,4 +1,5 @@
 import 'package:biodata_page/biodata_page.dart';
+import 'package:biodata_page/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,13 +14,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
         useMaterial3: true,
       ),
-      home: const BiodataPage(),
+      home: const SplashScreen(),
     );
   }
 }
-

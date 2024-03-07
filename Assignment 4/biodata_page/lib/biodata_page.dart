@@ -1,5 +1,8 @@
 import 'package:biodata_page/item_counter.dart';
+import 'package:biodata_page/next_page.dart';
+import 'package:biodata_page/utils/styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class BiodataPage extends StatelessWidget {
   const BiodataPage({super.key});
@@ -10,10 +13,12 @@ class BiodataPage extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
-        leading: IconButton(
-          onPressed: () {},
-          icon: const Icon(Icons.arrow_back),
-        ),
+        // leading: IconButton(
+        //   onPressed: () {
+        //     Navigator.pop(context);
+        //   },
+        //   icon: const Icon(Icons.arrow_back),
+        // ),
         centerTitle: true,
         // titleTextStyle: TextStyle(fontSize: 16),
         title: const Text(
@@ -35,6 +40,48 @@ class BiodataPage extends StatelessWidget {
         padding: const EdgeInsets.all(12),
         child: Column(
           children: [
+            // Container(
+            //   color: const Color.fromARGB(255, 254, 236, 235),
+            //   width: double.infinity,
+            //   height: 60,
+            //   child: Row(
+            //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //     children: [
+            //       Container(
+            //         color: Colors.yellow,
+            //         child: IconButton(
+            //           onPressed: () {},
+            //           icon: const Icon(Icons.arrow_back),
+            //         ),
+            //       ),
+            //       Container(
+            //         color: Colors.green,
+            //         child: const Text(
+            //           "EMPLOYER'S PROFILE",
+            //           style:
+            //               TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+            //         ),
+            //       ),
+            //       Container(
+            //         color: Colors.blue,
+            //         child: Row(
+
+            //           children: [
+            //             IconButton(
+            //               onPressed: () {},
+            //               icon: const Icon(Icons.chat_bubble_outline_rounded),
+            //             ),
+            //             IconButton(
+            //               onPressed: () {},
+            //               icon: const Icon(Icons.share),
+            //             ),
+            //           ],
+            //         ),
+            //       )
+            //     ],
+            //   ),
+            // ),
+
             Container(
               width: 90,
               height: 90,
@@ -110,7 +157,19 @@ class BiodataPage extends StatelessWidget {
               ],
             ),
             Expanded(
-              child: Image.asset('assets/images/image_1.png'),
+              child: Container(
+                color: Colors.red,
+                padding: const EdgeInsets.all(10),
+                child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const NextPage(),
+                          ));
+                    },
+                    child: Image.asset('assets/images/image_1.png')),
+              ),
             ),
             const SizedBox(
               height: 24,
@@ -123,9 +182,9 @@ class BiodataPage extends StatelessWidget {
             const SizedBox(
               height: 24,
             ),
-            const Text(
+            Text(
               'We need to collect few opinions\nbefore posting them',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+              style: AppStyles().heading(),
               textAlign: TextAlign.center,
             ),
           ],
